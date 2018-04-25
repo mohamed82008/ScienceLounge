@@ -1,8 +1,8 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "Really cool blog about ... something"
+title: "Science Lounge"
+author: "Mohamed Tarek Mohamed"
+description: "This is a blog about a few scientific topics that interest me."
 more: "read more »"
-url: "https://niklasbuschmann.github.io/"
+url: "https://mohamed82008.github.io/"
 baseurl: "/"
 paginate: 2
 permalink: pretty
@@ -22,9 +22,9 @@ comments:
 #  isso: "comments.mysite.org"
 
 links: # see http://fontawesome.io/icons/#brand for all possible icons
-  - twitter: "https://twitter.com/twitter/"
-  - github: "https://github.com/niklasbuschmann/contrast"
-  - envelope: "mailto:niklas.buschmann@posteo.de"
+  - twitter: ""
+  - github: "https://github.com/mohamed82008"
+  - envelope: "mohamed82008@gmail.com"
 
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
 sass: {style: expanded}
