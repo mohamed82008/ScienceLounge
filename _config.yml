@@ -3,7 +3,7 @@ author: "Mohamed Tarek Mohamed"
 description: "This is a blog about a few scientific topics that interest me."
 more: "read more »"
 url: "https://mohamed82008.github.io/"
-baseurl: "/SienceLounge/"
+baseurl: "/"
 paginate: 2
 permalink: pretty
 excerpt_separator: "\n\n\n" # two blank lines
