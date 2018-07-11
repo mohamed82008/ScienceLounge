@@ -4,11 +4,11 @@ date:   2018-07-11
 categories: text
 ---
 
-## Buckling
+## **Buckling**
 
 In the last blog post, I talked about the rally to get the LOBPCG PR out of the window. This naturally led to the next part of my project which involved using the LOBPCG algorithm to help with a real life application. You may remember from the second last blog post, how is it the "rise of the quadratic terms" in the nonlinear strain formula leads to a very important generalized eigenvalue problem, that if solved can tell us how stable a specific mechanical structure is towards the load applied.
 
-### Element Stress Stiffness Matrices
+### **Element Stress Stiffness Matrices**
 
 Identifying how much load it takes for a structure to break apart is a non-obvious task when the structure has a complicated shape and/or the load is complicated. In order to do buckling analysis using finite elements, one has to identify the so-called element stress stiffness matrices. The code used to generate these matrices is the core of any buckling analysis simulator. The code used in the package [LinearElasticity.jl](https://github.com/mohamed82008/LinearElasticity.jl) is shown below. This code makes use of the efficient finite element analysis package written in pure Julia [JuAFEM.jl](https://github.com/KristofferC/JuAFEM.jl) as well as a nice convenience package [Einsum.jl](https://github.com/ahwillia/Einsum.jl) which enabled me to use the Einstein summation notation commonly used in textbooks to refer to the concepts used below.
 
@@ -41,14 +41,14 @@ While it may be hard to understand the above code without prior knowledge of fin
 `ψ_e` is nothing but `kron(eye(3,3), σ)` where `σ` is known as the stress tensor inside the element, computed from the nodal displacements `_u` using the 3 lines in the above code which make use of the `@einsum` macro. These lines assume that the structure is made of a linearly elastic material with only 2 parameters defining its behaviour: 1) the Young's modulus `E`, and 2) Poisson's ratio `ν`.
 
 
-### The Buckle Dance
+### **The Buckle Dance**
 
 ![First failure mode](assets/2018-07-10-The-buckle-dance-ae3c30ed.PNG) ![Second failure mode](assets/2018-07-10-The-buckle-dance-bf1fb247.PNG)
 ![Third failure mode](assets/2018-07-10-The-buckle-dance-9ee5d171.PNG) ![Fourth failure mode](assets/2018-07-10-The-buckle-dance-452fcce0.PNG)
 
 The above are four different failure modes that can happen to a beam compressed from top with a uniform pressure load. It takes a higher load to enable the modes of failure with more bumps and so typically the first one is the one of primary interest, since we would like to avoid triggering any instability whatsoever.
 
-## Preconditioners.jl
+## **Preconditioners.jl**
 
 After completing the buckling analysis task, it was time to move on to a new interesting challenge! This led to [Preconditioners.jl](https://github.com/mohamed82008/Preconditioners.jl).
 
@@ -69,6 +69,6 @@ In this part of the GSoC project, I wrapped a number of preconditioners in the p
 2) Incomplete Cholesky preconditioner from the package [IncompleteSelectedInversion.jl](https://github.com/ettersi/IncompleteSelectedInversion.jl), and
 3) The Ruge-Stuben and smoothed aggregation AMG preconditioners from the package [AMG.jl](https://github.com/JuliaLinearAlgebra/AlgebraicMultigrid.jl).
 
-## JuMP-dev Workshop
+## **JuMP-dev Workshop**
 
 In the last month, I was busy for over a week preparing, flying and presenting at the [Second Annual JuMP-dev Workshop, Bordeaux 2018 ](http://www.juliaopt.org/meetings/bordeaux2018/). The talks should be up on Youtube any time. This event was very nice for learning about the new [MathOptInterface.jl](https://github.com/JuliaOpt/MathOptInterface.jl) and other advances in the optimization ecosystem of Julia. I also met a number of interesting people whose fields of work largely overlap with what I am planning to do in the near future so I came back home with alot of ideas! Special thanks to the MIT Sloan School of Management who funded my travel and stay (though still not reimbursed as of this time :p).
