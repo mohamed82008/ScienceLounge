@@ -43,8 +43,10 @@ While it may be hard to understand the above code without prior knowledge of fin
 
 ### **The Buckle Dance**
 
-![First failure mode](assets/2018-07-10-The-buckle-dance-ae3c30ed.PNG) ![Second failure mode](assets/2018-07-10-The-buckle-dance-bf1fb247.PNG)
-![Third failure mode](assets/2018-07-10-The-buckle-dance-9ee5d171.PNG) ![Fourth failure mode](assets/2018-07-10-The-buckle-dance-452fcce0.PNG)
+![First failure mode](https://user-images.githubusercontent.com/19524993/42571587-f60446c2-855a-11e8-8b95-eb8584917933.PNG)
+![Second failure mode](https://user-images.githubusercontent.com/19524993/42571588-f63e91c4-855a-11e8-9507-8ae1e5e4d2c6.PNG)
+![Third failure mode](https://user-images.githubusercontent.com/19524993/42571589-f6782682-855a-11e8-9b9a-39b4b078d999.PNG)
+![Fourth failure mode](https://user-images.githubusercontent.com/19524993/42571593-f6ad8c1e-855a-11e8-939e-0b9f022ff6c5.PNG)
 
 The above are four different failure modes that can happen to a beam compressed from top with a uniform pressure load. It takes a higher load to enable the modes of failure with more bumps and so typically the first one is the one of primary interest, since we would like to avoid triggering any instability whatsoever.
 
