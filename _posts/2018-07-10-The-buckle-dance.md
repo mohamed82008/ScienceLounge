@@ -48,7 +48,7 @@ While it may be hard to understand the above code without prior knowledge of fin
 ![Third failure mode](https://user-images.githubusercontent.com/19524993/42571589-f6782682-855a-11e8-9b9a-39b4b078d999.PNG)
 ![Fourth failure mode](https://user-images.githubusercontent.com/19524993/42571593-f6ad8c1e-855a-11e8-939e-0b9f022ff6c5.PNG)
 
-The above are four different failure modes that can happen to a beam compressed from top with a uniform pressure load. It takes a higher load to enable the modes of failure with more bumps and so typically the first one is the one of primary interest, since we would like to avoid triggering any instability whatsoever.
+The above are four different failure modes that can happen to a beam compressed from top with a uniform pressure load. It takes a higher load to enable the modes of failure with more bumps and so typically the first one is the one of primary interest, since we would like to avoid triggering any instability whatsoever. These figures were generated with the awesome [Makie.jl](https://github.com/JuliaPlots/Makie.jl) thanks to the awesome [Simon Danisch](https://github.com/SimonDanisch).
 
 ## **Preconditioners.jl**
 
